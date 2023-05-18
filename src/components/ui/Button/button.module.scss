@@ -1,0 +1,43 @@
+// Button Component
+
+.button {
+	font-size: 0.8667rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.15s $ease;
+
+	&.primary,
+	&.secondary {
+		padding: 15px 30px;
+	}
+
+	&.primary {
+		color: white;
+		background-color: $accent;
+		padding: 15px 30px;
+
+		&:hover {
+			background-color: $accent-light;
+		}
+	}
+
+	&.secondary {
+		border: 1px solid black;
+		padding: 14px 29px;
+
+		&:hover {
+			color: white;
+			background-color: black;
+		}
+	}
+
+	&.ghost {
+		&:hover {
+			color: $accent;
+		}
+
+		svg {
+			margin-left: 13px;
+		}
+	}
+}
