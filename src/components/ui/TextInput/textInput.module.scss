@@ -1,0 +1,59 @@
+// TextInput Component
+
+.textInput {
+	display: inline-block;
+	width: 300px;
+
+	&.error {
+		.header {
+			.label {
+				color: $error;
+			}
+		}
+
+		input {
+			border: 2px solid $error;
+
+			&:active,
+			&:focus {
+				border-color: $error;
+			}
+		}
+	}
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		font-size: 0.8rem;
+		line-height: 16px;
+		letter-spacing: -0.21px;
+		margin-bottom: 10px;
+
+		.label {
+			font-weight: 700;
+		}
+
+		.errorMsg {
+			color: $error;
+			font-weight: 500;
+		}
+	}
+
+	input {
+		font-size: 0.9333rem;
+		font-weight: 700;
+		line-height: 19px;
+		letter-spacing: -0.25px;
+		width: 100%;
+		padding: 18px 24px;
+		border: 1px solid $gray-300;
+		border-radius: 8px;
+		caret-color: $accent;
+		outline: none;
+
+		&:active,
+		&:focus {
+			border-color: $accent;
+		}
+	}
+}
