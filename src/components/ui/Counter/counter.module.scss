@@ -1,0 +1,35 @@
+// Counter Component
+
+.counter {
+	display: grid;
+	grid-template-columns: 46px 28px 46px;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $gray-200;
+	font-size: 0.8667rem;
+	font-weight: 700;
+	width: max-content;
+
+	.number {
+		line-height: 18px;
+		letter-spacing: 1px;
+		text-align: center;
+	}
+
+	.subtract,
+	.add {
+		font-weight: 700;
+		padding: 15px;
+		opacity: 0.25;
+		transition: $time $ease;
+
+		&:hover {
+			color: $accent;
+			opacity: 1;
+		}
+
+		&.disabled {
+			pointer-events: none;
+		}
+	}
+}
