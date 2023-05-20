@@ -1,0 +1,60 @@
+// Radio Component
+
+.radio {
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	padding: 18px 16px;
+	border: 1px solid $gray-300;
+	border-radius: 8px;
+	transition: 0.1s ease-in-out;
+
+	&.active {
+		border-color: $accent;
+	}
+
+	input {
+		cursor: pointer;
+		position: relative;
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: 1px solid $gray-300;
+		outline: none;
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: $accent;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			opacity: 0;
+			transition: 0.08s ease-in-out;
+		}
+
+		&:checked {
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&:hover {
+		border-color: $accent;
+	}
+
+	.label {
+		font-size: 0.9333rem;
+		font-weight: 700;
+		line-height: 19px;
+		letter-spacing: -0.25px;
+		margin-left: 16px;
+	}
+}
