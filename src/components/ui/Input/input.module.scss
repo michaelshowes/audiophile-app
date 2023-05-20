@@ -1,7 +1,7 @@
 // TextInput Component
 
-.textInput {
-	display: inline-block;
+.input {
+	// display: inline-block;
 	width: 300px;
 
 	&.error {
@@ -12,7 +12,7 @@
 		}
 
 		input {
-			border: 2px solid $error;
+			outline: 1px solid $error;
 
 			&:active,
 			&:focus {
