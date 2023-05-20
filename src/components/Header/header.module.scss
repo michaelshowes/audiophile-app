@@ -1,5 +1,59 @@
 // Header Component
 
 .header {
-	
+	background-color: black;
+	color: white;
+
+	.inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 32px 0;
+
+		@include from($tablet) {
+			justify-content: unset;
+		}
+
+		@include from($desktop) {
+			justify-content: space-between;
+		}
+
+		& > * {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.menu {
+		@include from($tablet) {
+			margin-right: 42px;
+		}
+
+		@include from($desktop) {
+			display: none;
+		}
+	}
+
+	.logo {
+		@include from($tablet) {
+			margin-right: auto;
+		}
+
+		@include from($desktop) {
+			margin: 0;
+		}
+	}
+
+	.nav {
+		display: none;
+
+		@include from($desktop) {
+			display: block;
+		}
+
+		ul {
+			display: flex;
+			gap: 34px;
+		}
+	}
 }
