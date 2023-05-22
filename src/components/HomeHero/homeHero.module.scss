@@ -1,0 +1,51 @@
+// HomeHero Component
+
+.homeHero {
+	position: relative;
+	color: white;
+	background-color: black;
+	padding: 198px 24px 112px;
+	isolation: isolate;
+
+	.image {
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top;
+			opacity: 0.5;
+		}
+	}
+
+	.inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.eyebrow {
+			font-size: 0.9333rem;
+			line-height: 19px;
+			letter-spacing: 10px;
+			text-transform: uppercase;
+			margin-bottom: 16px;
+			opacity: 0.5;
+		}
+
+		h1,
+		p {
+			text-align: center;
+		}
+
+		h1 {
+			margin-bottom: 24px;
+		}
+
+		p {
+			margin-bottom: 28px;
+		}
+	}
+}

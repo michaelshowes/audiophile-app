@@ -1,13 +1,9 @@
-import TextInput from '@components/ui/TextInput/TextInput';
+import HomeHero from '@components/HomeHero/HomeHero';
 
-type Props = {};
-export default function Home({}: Props) {
+export default function Home() {
 	return (
 		<div>
-			<TextInput
-				label='Name'
-				placeholder='Insert your name'
-			/>
+			<HomeHero />
 		</div>
 	);
 }

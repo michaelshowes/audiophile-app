@@ -3,6 +3,7 @@
 .button {
 	font-size: 0.8667rem;
 	font-weight: 700;
+	line-height: 1.15;
 	text-transform: uppercase;
 	transition: 0.15s $ease;
 
@@ -33,7 +34,14 @@
 
 	&.ghost {
 		&:hover {
-			color: $accent;
+			span {
+				color: rgba($accent, 1);
+			}
+		}
+
+		span {
+			color: rgba(black, 0.5);
+			transition: 0.15s $ease;
 		}
 
 		svg {
