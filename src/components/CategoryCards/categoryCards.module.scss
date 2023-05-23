@@ -1,7 +1,24 @@
 // CategoryCards Component
 
 .categoryCards {
+	padding: 35px 0;
+
+	@include from($tablet) {
+		padding: 56px 0 68px;
+	}
+
 	ul {
+		display: flex;
+		flex-direction: column;
+		padding-top: 50px;
+		gap: 68px;
+
+		@include from($tablet) {
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 10px;
+		}
+
 		li {
 			flex: 1;
 			display: flex;
@@ -22,8 +39,6 @@
 			img {
 				position: absolute;
 				top: -50px;
-				// left: 50%;
-				// transform: translateX(-50%);
 				max-width: 150px;
 				height: auto;
 				z-index: -1;

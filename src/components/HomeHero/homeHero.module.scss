@@ -4,8 +4,36 @@
 	position: relative;
 	color: white;
 	background-color: black;
-	padding: 198px 24px 112px;
+	padding: 198px 0 112px;
 	isolation: isolate;
+
+	@include from($tablet) {
+		padding: 216px 0 167px;
+	}
+
+	.divider {
+		position: absolute;
+		top: 89px;
+		left: 0;
+		width: 100%;
+
+		div {
+			height: 1px;
+			background-color: white;
+			opacity: 0.1;
+		}
+
+		@include from($tablet) {
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 0 40px;
+			max-width: 1110px;
+		}
+
+		@include from(12) {
+			padding: 0;
+		}
+	}
 
 	.image {
 		position: absolute;
@@ -16,8 +44,34 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			object-position: top;
 			opacity: 0.5;
+		}
+
+		.tablet,
+		.desktop {
+			display: none;
+		}
+
+		@include from($tablet) {
+			.tablet {
+				display: block;
+			}
+
+			.mobile {
+				display: none;
+			}
+		}
+
+		@include from($desktop) {
+			.desktop {
+				display: block;
+				opacity: 1;
+				mix-blend-mode: multiply;
+			}
+
+			.tablet {
+				display: none;
+			}
 		}
 	}
 
@@ -25,6 +79,18 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		max-width: 380px;
+		margin: 0 auto;
+
+		@include from($desktop) {
+			align-items: flex-start;
+			margin: 0;
+
+			h1,
+			p {
+				text-align: left !important;
+			}
+		}
 
 		.eyebrow {
 			font-size: 0.9333rem;
@@ -45,7 +111,9 @@
 		}
 
 		p {
+			max-width: 350px;
 			margin-bottom: 28px;
+			opacity: 0.75;
 		}
 	}
 }

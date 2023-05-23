@@ -1,5 +1,139 @@
 // Footer Component
 
+$gap: 48px;
+
 .footer {
-	
+	position: relative;
+	color: white;
+	background-color: black;
+	padding: 52px 0 38px;
+
+	@include from($tablet) {
+		padding: 60px 0 46px;
+	}
+
+	& > div:first-child {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		height: 4px;
+
+		div {
+			background-color: $accent;
+			width: 100px;
+			height: 100%;
+			margin: 0 auto;
+
+			@include from($tablet) {
+				margin: 0;
+			}
+		}
+	}
+
+	.inner {
+		row-gap: $gap;
+	}
+
+	.upper {
+		display: flex;
+		flex-direction: column;
+		row-gap: $gap;
+		margin-bottom: $gap;
+
+		@include from($tablet) {
+			row-gap: 32px;
+			margin-bottom: 32px;
+		}
+
+		@include from($desktop) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		svg {
+			margin: 0 auto;
+
+			@include from($tablet) {
+				margin: 0;
+			}
+		}
+
+		.nav {
+			ul {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				row-gap: 16px;
+
+				@include from($tablet) {
+					flex-direction: row;
+					column-gap: 34px;
+				}
+			}
+		}
+	}
+
+	p {
+		font-weight: 500;
+		text-align: center;
+		opacity: 0.5;
+		margin-bottom: $gap;
+
+		@include from($tablet) {
+			text-align: left;
+			margin-bottom: 80px;
+		}
+
+		@include from($desktop) {
+			max-width: 540px;
+			margin-bottom: 56px;
+		}
+	}
+
+	.lower {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: $gap;
+
+		@include from($tablet) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.copyright {
+			font-weight: 700;
+			margin: 0;
+		}
+
+		.social {
+			display: flex;
+			align-items: center;
+			column-gap: 16px;
+
+			@include from($desktop) {
+				margin-top: -156px;
+			}
+
+			a {
+				svg {
+					path {
+						transition: 0.1s $ease;
+					}
+				}
+
+				&:hover {
+					svg {
+						path {
+							fill: $accent;
+						}
+					}
+				}
+			}
+		}
+	}
 }
